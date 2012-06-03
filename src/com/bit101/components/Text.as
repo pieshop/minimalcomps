@@ -130,7 +130,10 @@ package com.bit101.components
 				_tf.selectable = _selectable;
 				_tf.type = TextFieldType.DYNAMIC;
 			}
-			_tf.setTextFormat(_format);
+			//_tf.setTextFormat(_format);
+			// FIX to allow styling of textArea with StyleSheets
+			// https://github.com/minimalcomps/minimalcomps/issues/7
+			if (!_tf.styleSheet) _tf.setTextFormat(_format);
 		}
 		
 		
